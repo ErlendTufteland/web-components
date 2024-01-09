@@ -86,61 +86,46 @@ export function defineSModalComponent(themeStyles: CSSStyleSheet) {
       }
       this._updateRendering();
 
-      this.updateTitle();
-      this.updateFooter();
+      this.updateContent("#modal-title", 'template[slot="title"]', "title");
+      this.updateContent("#modal-footer", 'template[slot="footer"]', "footer");
     }
+
+    updateContent(contentSelector: string, slotSelector: string, attributeName: string) {
+      if (!this.shadowRoot) return;
+      const slotContent = this.querySelector(slotSelector);
+      const contentEl = this.shadowRoot.querySelector(contentSelector) as HTMLElement;
+    
+      if (slotContent) {
+        contentEl.innerHTML = "";
+        contentEl.appendChild((slotContent as HTMLTemplateElement)?.content.cloneNode(true));
+      } else {
+        const attributeContent = this.getAttribute(attributeName);
+        (contentEl as HTMLElement).textContent = attributeContent ?? "";
+      }
+
+      contentEl.style.display =
+        slotContent || this.hasAttribute(attributeName) ? "block" : "none";
+    }
+
 
     attributeChangedCallback(name: string, oldValue: string, newValue: string) {
       if (name === "visible") {
         this._modalVisible = newValue !== null;
         this._updateRendering();
       } else if (name === "title") {
-        this.updateTitle();
+        this.updateTextContent("#modal-title", "title");
       } else if (name === "footer") {
-        this.updateFooter();
+        this.updateTextContent("#modal-footer", "footer");
       }
     }
 
-    updateTitle() {
+    updateTextContent(selector: string, attributeName: string) {
       if (!this.shadowRoot) return;
-      const title = this.getAttribute("title");
-      const titleSlot = this.shadowRoot.querySelector(
-        "#modal-title"
-      ) as HTMLElement;
-      if (!titleSlot) return;
-
-      const slotContent = this.querySelector('template[slot="title"]');
-      if (slotContent) {
-        const content = (slotContent as HTMLTemplateElement).content.cloneNode(
-          true
-        );
-        titleSlot.innerHTML = "";
-        titleSlot.appendChild(content);
-        titleSlot.style.display = "block";
-      } else {
-        titleSlot.innerHTML = title ? `${title}` : "";
-        titleSlot.style.display = title ? "block" : "none";
-      }
-    }
-
-    updateFooter() {
-      if (!this.shadowRoot) return;
-      const footer = this.getAttribute("footer");
-      const footerSlot = this.shadowRoot.querySelector(
-        "#modal-footer"
-      ) as HTMLElement;
-
-      const slotContent = this.querySelector('template[slot="footer"]');
-      if (slotContent) {
-        const content = (slotContent as HTMLTemplateElement).content.cloneNode(
-          true
-        );
-        footerSlot.innerHTML = "";
-        footerSlot.appendChild(content);
-        footerSlot.style.display = "block";
-      } else {
-        footerSlot.innerHTML = footer ? `<footer>${footer}</footer>` : "";
-        footerSlot.style.display = footer ? "block" : "none";
+      const element = this.shadowRoot.querySelector(selector) as HTMLElement;
+      if (element) {
+        const content = this.getAttribute(attributeName);
+        element.textContent = content ?? "";
+        element.style.display = content ? "block" : "none";
       }
     }
 

@@ -31,6 +31,8 @@
     --text-color: #333333;
     /* Dark gray for text */
 
+    --background-surface: #fff;
+
     /* Additional colors */
     --success-color: #388E3C;
     /* Green */
@@ -58,6 +60,13 @@
     --border-radius: 0.4rem;
     --border-width: 1px;
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-surface);
 }
 
 .primary-bg {
