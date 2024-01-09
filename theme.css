@@ -9,6 +9,9 @@
     /* A lighter shade of purple */
     --primary-border-color: #9C27B0;
     /* A complementary shade of purple */
+    --primary-active-color: #4B007A;
+    /* Darker shade of primary color */
+    
 
     /* Secondary color scheme */
     --secondary-color: #009688;
@@ -19,6 +22,8 @@
     /* Lighter teal */
     --secondary-border-color: #00897B;
     /* Darker teal */
+    --secondary-active-color: #00796B;
+    /* Darker shade of secondary color */
 
     /* Background and text colors */
     --background-color: #f4f4f4;

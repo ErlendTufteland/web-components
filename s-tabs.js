@@ -13,15 +13,16 @@ function defineSTabsComponent(themeStyles) {
       .tab-button {
         cursor: pointer;
         padding: var(--spacing);
-        background-color: var(--background-color);
+        background-color: var(--secondary-color);
+        color: var(--secondary-text-color);
         border: none;
-        border-bottom: 2px solid transparent;
+        border-bottom: 4px solid transparent;
         border-radius: var(--border-radius) var(--border-radius) 0 0;
         margin-right: var(--spacing);
       }
 
       .tab-button.active {
-        border-bottom-color: var(--primary-color);
+        border-bottom-color: var(--secondary-active-color);
       }
 
       .tab-content {

@@ -1,15 +1,30 @@
-// Fetch and apply the styles from theme.css
-fetch("./theme.css")
-  .then((response) => response.text())
-  .then((css) => {
-    const themeStyles = new CSSStyleSheet();
-    themeStyles.replaceSync(css);
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("./theme.css")
+    .then((response) => response.text())
+    .then((css) => {
+      const themeStyles = new CSSStyleSheet();
+      themeStyles.replaceSync(css);
 
-    // Define the Card component after the styles are loaded
-    defineSCardComponent(themeStyles);
-    defineSMenubarComponent(themeStyles);
-    defineSMenuitemComponent(themeStyles);
-    defineSButtonComponent(themeStyles);
-    defineSTabsComponent(themeStyles);
-    defineSTabComponent(themeStyles);
-  });
+      defineSCardComponent(themeStyles);
+      defineSMenubarComponent(themeStyles);
+      defineSMenuitemComponent(themeStyles);
+      defineSButtonComponent(themeStyles);
+      defineSTabsComponent(themeStyles);
+      defineSTabComponent(themeStyles);
+      defineSTableComponent(themeStyles);
+
+      // Set data to s-table
+      const tableElement = document.querySelector("s-table");
+      if (tableElement) {
+        const tableData = {
+          headers: ["Name", "Age", "City"],
+          rows: [
+            ["Alice", 30, "New York"],
+            ["Bob", 25, "San Francisco"],
+            ["Charlie", 35, "London"],
+          ],
+        };
+        tableElement.data = tableData;
+      }
+    });
+});
