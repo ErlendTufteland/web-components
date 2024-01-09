@@ -61,8 +61,6 @@ To customize the design system:
 2. Modify the CSS variables to suit your project's design requirements.
 3. The changes will be reflected across all components that use these variables.
 
-Absolutely! Here are more detailed descriptions for each component in your design system:
-
 ### Components
 
 #### s-button
