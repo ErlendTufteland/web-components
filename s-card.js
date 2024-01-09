@@ -1,4 +1,4 @@
-function defineCardComponent(themeStyles) {
+function defineSCardComponent(themeStyles) {
   const cardTemplate = document.createElement("template");
   cardTemplate.innerHTML = `
      <style>
@@ -41,7 +41,7 @@ function defineCardComponent(themeStyles) {
     </div>
 `;
 
-  class Card extends HTMLElement {
+  class SCard extends HTMLElement {
     static get observedAttributes() {
       return ["title", "header", "footer"];
     }
@@ -118,5 +118,5 @@ function defineCardComponent(themeStyles) {
     }
   }
 
-  customElements.define("s-card", Card);
+  customElements.define("s-card", SCard);
 }

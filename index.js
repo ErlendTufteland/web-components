@@ -6,7 +6,8 @@ fetch("./theme.css")
     themeStyles.replaceSync(css);
 
     // Define the Card component after the styles are loaded
-    defineCardComponent(themeStyles);
-    defineMenubarComponent(themeStyles);
-    defineMenuitemComponent(themeStyles);
+    defineSCardComponent(themeStyles);
+    defineSMenubarComponent(themeStyles);
+    defineSMenuitemComponent(themeStyles);
+    defineSButtonComponent(themeStyles);
   });

@@ -1,4 +1,4 @@
-function defineMenuitemComponent(themeStyles) {
+function defineSMenuitemComponent(themeStyles) {
   const menuItemTemplate = document.createElement("template");
   menuItemTemplate.innerHTML = `
     <style>
@@ -21,7 +21,7 @@ function defineMenuitemComponent(themeStyles) {
     </li>
 `;
 
-  class MenuItem extends HTMLElement {
+  class SMenuItem extends HTMLElement {
     constructor() {
       super();
       this.attachShadow({ mode: "open" });
@@ -30,5 +30,5 @@ function defineMenuitemComponent(themeStyles) {
     }
   }
 
-  customElements.define("s-menuitem", MenuItem);
+  customElements.define("s-menuitem", SMenuItem);
 }

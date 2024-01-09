@@ -1,4 +1,4 @@
-function defineMenubarComponent(themeStyles) {
+function defineSMenubarComponent(themeStyles) {
   const menubarTemplate = document.createElement("template");
   menubarTemplate.innerHTML = `
     <style>
@@ -45,7 +45,7 @@ function defineMenubarComponent(themeStyles) {
     </ul>
 `;
 
-  class Menubar extends HTMLElement {
+  class SMenubar extends HTMLElement {
     constructor() {
       super();
       this.attachShadow({ mode: "open" });
@@ -62,5 +62,5 @@ function defineMenubarComponent(themeStyles) {
     }
   }
 
-  customElements.define("s-menubar", Menubar);
+  customElements.define("s-menubar", SMenubar);
 }
