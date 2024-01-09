@@ -28,7 +28,8 @@ export function defineSTabsComponent(themeStyles: CSSStyleSheet) {
       .tab-content {
         display: none;
         padding: var(--spacing);
-        background-color: var(--background-color);
+        background-color: var(--content-background-color);
+        color: var(--content-text-color);
         border: var(--border-width) solid var(--secondary-border-color);
         border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
       }

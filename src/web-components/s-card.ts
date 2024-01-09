@@ -25,8 +25,8 @@ export function defineSCardComponent(themeStyles: CSSStyleSheet) {
         }
 
         #header, #body, #footer {
-            color: var(--text-color);
-            background-color: var(--background-color);
+            color: var(--content-text-color);
+            background-color: var(--content-background-color);
         }
 
     </style>

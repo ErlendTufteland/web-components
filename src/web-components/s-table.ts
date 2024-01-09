@@ -38,7 +38,8 @@ export function defineSTableComponent(themeStyles: CSSStyleSheet) {
             td {
                 border-bottom: var(--border-width) solid var(--secondary-border-color);
                 border-left: var(--border-width) solid var(--secondary-border-color);
-                background-color: var(--background-color);
+                background-color: var(--content-background-color);
+                color: var(--content-text-color);
             }
 
             td:last-child {

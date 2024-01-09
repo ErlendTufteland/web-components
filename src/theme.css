@@ -25,13 +25,16 @@
     --secondary-active-color: #00796B;
     /* Darker shade of secondary color */
 
-    /* Background and text colors */
-    --background-color: #f4f4f4;
-    /* Light gray for background */
-    --text-color: #333333;
-    /* Dark gray for text */
 
-    --background-surface: #fff;
+
+    /* Background and text colors */
+    --background-color: #1e1e1e;
+    --text-color: #eee;
+
+    --content-background-color: #f4f4f4;
+    /* Light gray for background */
+    --content-text-color: #333333;
+    /* Dark gray for text */
 
     /* Additional colors */
     --success-color: #388E3C;
@@ -66,7 +69,8 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: var(--background-surface);
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .primary-bg {
