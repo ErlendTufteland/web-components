@@ -15,7 +15,7 @@ function defineCardComponent(themeStyles) {
           margin: 0
         }
 
-        #title, #header, #content, #footer {
+        #title, #header, #body, #footer {
             padding: var(--spacing);
             border-bottom: var(--border-width) solid var(--secondary-border-color);
         }
@@ -24,7 +24,7 @@ function defineCardComponent(themeStyles) {
             display: none;
         }
 
-        #header, #content, #footer {
+        #header, #body, #footer {
             color: var(--text-color);
             background-color: var(--background-color);
         }
@@ -32,9 +32,9 @@ function defineCardComponent(themeStyles) {
     </style>
 
     <div id="card">
-        <h1 id="title"></h1>
+        <h3 id="title"></h3>
         <header id="header"></header>
-        <div id="content">
+        <div id="body">
             <slot></slot>
         </div>
         <footer id="footer"></footer>
