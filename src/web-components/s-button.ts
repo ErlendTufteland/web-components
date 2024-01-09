@@ -1,4 +1,4 @@
-function defineSButtonComponent(themeStyles: CSSStyleSheet) {
+export function defineSButtonComponent(themeStyles: CSSStyleSheet) {
   const buttonTemplate = document.createElement("template");
   buttonTemplate.innerHTML = `
     <style>

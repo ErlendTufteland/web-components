@@ -1,4 +1,4 @@
-function defineSMenubarComponent(themeStyles: CSSStyleSheet) {
+export function defineSMenubarComponent(themeStyles: CSSStyleSheet) {
   const menubarTemplate = document.createElement("template");
   menubarTemplate.innerHTML = `
     <style>

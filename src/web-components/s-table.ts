@@ -1,9 +1,9 @@
-interface TableData {
+export interface TableData {
   headers: string[];
   rows: (string | number)[][];
 }
 
-function defineSTableComponent(themeStyles: CSSStyleSheet) {
+export function defineSTableComponent(themeStyles: CSSStyleSheet) {
   const tableTemplate = document.createElement("template");
   tableTemplate.innerHTML = `
         <style>

@@ -1,4 +1,4 @@
-function defineSTabComponent(themeStyles: CSSStyleSheet) {
+export function defineSTabComponent(themeStyles: CSSStyleSheet) {
   class STab extends HTMLElement {
     constructor() {
       super();

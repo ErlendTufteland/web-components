@@ -1,4 +1,4 @@
-function defineSCardComponent(themeStyles: CSSStyleSheet) {
+export function defineSCardComponent(themeStyles: CSSStyleSheet) {
   const cardTemplate = document.createElement("template");
   cardTemplate.innerHTML = `
      <style>

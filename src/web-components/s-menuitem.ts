@@ -1,4 +1,4 @@
-function defineSMenuitemComponent(themeStyles: CSSStyleSheet) {
+export function defineSMenuitemComponent(themeStyles: CSSStyleSheet) {
   const menuItemTemplate = document.createElement("template");
   menuItemTemplate.innerHTML = `
     <style>

@@ -1,4 +1,4 @@
-function defineSTabsComponent(themeStyles: CSSStyleSheet) {
+export function defineSTabsComponent(themeStyles: CSSStyleSheet) {
   const tabsTemplate = document.createElement("template");
   tabsTemplate.innerHTML = `
     <style>
