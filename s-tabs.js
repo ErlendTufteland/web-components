@@ -18,7 +18,7 @@ function defineSTabsComponent(themeStyles) {
         border: none;
         border-bottom: 4px solid transparent;
         border-radius: var(--border-radius) var(--border-radius) 0 0;
-        margin-right: var(--spacing);
+        margin-right: .25rem;
       }
 
       .tab-button.active {
