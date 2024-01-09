@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Components</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./theme.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    
+    <script src="s-card.js" defer></script>
+    <script src="s-menubar.js" defer></script>
+    <script src="s-menuitem.js" defer></script>
+    
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Welcome to my "Web Components"</h1>
+    </main>
+
+    <h2>MenuBar</h2>
+    <s-menubar>
+        <s-menuitem>Home</s-menuitem>
+        <s-menuitem>About</s-menuitem>
+        <s-menuitem>Contact</s-menuitem>
+    </s-menubar>
+
+    <h2>Card</h2>
+    <s-card title="This is the title" header="This is the Header" footer="this is the footer">
+        this is the content
+    </s-card>
+    
+    <s-card>
+        <template slot="title">
+            This is a template Title
+        </template>
+
+        <template slot="header">
+            <div>
+                <h2>This is a template Header</h2>
+                <p>header content</p>
+            </div>
+        </template>
+        this is the content
+        <template slot="footer">
+            <div>
+                <h3>This is a template Footer</h3>
+                <p>Footer content</p>
+            </div>
+        </template>
+    </s-card>
+
+</body>
+
+</html>
