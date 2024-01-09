@@ -24,30 +24,30 @@
     </s-menubar>
 
     <h2>Card</h2>
-    <s-card title="Title Attribute And Content Slot">
-        this is the content
+    <s-card title="Title Attribute And Body Slot">
+        this is the body
     </s-card>
 
-    <s-card title="Attributes And Content Slot" header="This is the Header" footer="this is the footer">
-        this is the content
+    <s-card title="Attributes And Body Slot" header="This is the Header" footer="this is the footer">
+        this is the body
     </s-card>
 
     <s-card>
         <template slot="title">
-            Templates And Content Slot
+            Templates And Body Slot
         </template>
 
         <template slot="header">
             <div>
                 <h2>This is a template Header</h2>
-                <p>header content</p>
+                <p>header</p>
             </div>
         </template>
-        this is the content
+        this is the body
         <template slot="footer">
             <div>
                 <h3>This is a template Footer</h3>
-                <p>Footer content</p>
+                <p>Footer</p>
             </div>
         </template>
     </s-card>
@@ -77,14 +77,20 @@
     <s-table></s-table>
 
     <h2>Modal</h2>
-    <s-button onclick="document.getElementById('myModal').show()">Open Modal</s-button>
-    <s-modal id="myModal">
-        <div slot="header">Modal Header</div>
-        <div slot="body">This is a simple modal.</div>
-        <div slot="footer">
-            <s-button onclick="document.getElementById('myModal').hide()">Close</s-button>
-        </div>
+    <s-button onclick="document.getElementById('attributeModal').show()">Open Attributes Modal</s-button>
+    <s-modal id="attributeModal" title="Modal Title" footer="Footer content">
+        This is the modal content
     </s-modal>
+
+
+    <s-button onclick="document.getElementById('templateModal').show()">Open Templates Modal</s-button>
+    <s-modal id="templateModal">
+        <template slot="title">Modal Title</template>
+        This is the modal body
+        <template slot="footer">Footer content</template>
+    </s-modal>
+
+
 
 </body>
 
