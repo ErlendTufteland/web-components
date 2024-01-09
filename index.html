@@ -76,6 +76,16 @@
     <h2>Table</h2>
     <s-table></s-table>
 
+    <h2>Modal</h2>
+    <s-button onclick="document.getElementById('myModal').show()">Open Modal</s-button>
+    <s-modal id="myModal">
+        <div slot="header">Modal Header</div>
+        <div slot="body">This is a simple modal.</div>
+        <div slot="footer">
+            <s-button onclick="document.getElementById('myModal').hide()">Close</s-button>
+        </div>
+    </s-modal>
+
 </body>
 
 </html>

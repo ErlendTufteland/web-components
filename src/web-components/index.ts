@@ -5,6 +5,7 @@ import { defineSButtonComponent } from "./s-button";
 import { defineSTabsComponent } from "./s-tabs";
 import { defineSTabComponent } from "./s-tab";
 import { defineSTableComponent } from "./s-table";
+import { defineSModalComponent } from "./s-modal";
 
 export function defineWebComponents() {
   return fetch("./theme.css")
@@ -20,5 +21,6 @@ export function defineWebComponents() {
       defineSTabsComponent(themeStyles);
       defineSTabComponent(themeStyles);
       defineSTableComponent(themeStyles);
+      defineSModalComponent(themeStyles);
     });
 };
