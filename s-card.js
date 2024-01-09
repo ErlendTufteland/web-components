@@ -2,10 +2,11 @@ function defineCardComponent(themeStyles) {
   const cardTemplate = document.createElement("template");
   cardTemplate.innerHTML = `
      <style>
-        .card {
+        #card {
             border: var(--border-width) solid var(--secondary-border-color);
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
+            margin-bottom: var(--spacing);
         }
 
         #title {
@@ -19,6 +20,10 @@ function defineCardComponent(themeStyles) {
             border-bottom: var(--border-width) solid var(--secondary-border-color);
         }
 
+        #title, #header, #footer {
+            display: none;
+        }
+
         #header, #content, #footer {
             color: var(--text-color);
             background-color: var(--background-color);
@@ -26,7 +31,7 @@ function defineCardComponent(themeStyles) {
 
     </style>
 
-    <div class="card">
+    <div id="card">
         <h1 id="title"></h1>
         <header id="header"></header>
         <div id="content">
@@ -73,8 +78,10 @@ function defineCardComponent(themeStyles) {
         const content = slotContent.content.cloneNode(true);
         titleSlot.innerHTML = "";
         titleSlot.appendChild(content);
+        titleSlot.style.display = "block";
       } else {
         titleSlot.innerHTML = title ? `${title}` : "";
+        titleSlot.style.display = title ? "block" : "none";
       }
     }
 
@@ -87,8 +94,10 @@ function defineCardComponent(themeStyles) {
         const content = slotContent.content.cloneNode(true);
         headerSlot.innerHTML = "";
         headerSlot.appendChild(content);
+        headerSlot.style.display = "block";
       } else {
         headerSlot.innerHTML = header ? `<header>${header}</header>` : "";
+        headerSlot.style.display = header ? "block" : "none";
       }
     }
 
@@ -101,8 +110,10 @@ function defineCardComponent(themeStyles) {
         const content = slotContent.content.cloneNode(true);
         footerSlot.innerHTML = "";
         footerSlot.appendChild(content);
+        footerSlot.style.display = "block";
       } else {
         footerSlot.innerHTML = footer ? `<footer>${footer}</footer>` : "";
+        footerSlot.style.display = footer ? "block" : "none";
       }
     }
   }

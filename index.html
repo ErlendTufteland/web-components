@@ -30,13 +30,17 @@
     </s-menubar>
 
     <h2>Card</h2>
-    <s-card title="This is the title" header="This is the Header" footer="this is the footer">
+    <s-card title="Title Attribute And Content Slot">
+        this is the content
+    </s-card>
+
+    <s-card title="Attributes And Content Slot" header="This is the Header" footer="this is the footer">
         this is the content
     </s-card>
     
     <s-card>
         <template slot="title">
-            This is a template Title
+            Templates And Content Slot
         </template>
 
         <template slot="header">
