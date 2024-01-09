@@ -1,46 +1,46 @@
 /* theme.css */
 :root {
     /* Primary color scheme */
-        --primary-color: #6A1B9A;
-        /* Rich purple */
-        --primary-text-color: #ffffff;
-        /* White for contrast */
-        --primary-hover-color: #7B1FA2;
-        /* A lighter shade of purple */
-        --primary-border-color: #9C27B0;
-        /* A complementary shade of purple */
-    
-        /* Secondary color scheme */
-        --secondary-color: #009688;
-        /* Teal */
-        --secondary-text-color: #ffffff;
-        /* White for contrast */
-        --secondary-hover-color: #26A69A;
-        /* Lighter teal */
-        --secondary-border-color: #00897B;
-        /* Darker teal */
-    
-        /* Background and text colors */
-        --background-color: #f4f4f4;
-        /* Light gray for background */
-        --text-color: #333333;
-        /* Dark gray for text */
-    
-        /* Additional colors */
-        --success-color: #388E3C;
-        /* Green */
-        --success-text-color: #ffffff;
-        /* White for contrast */
-    
-        --error-color: #D32F2F;
-        /* Red */
-        --error-text-color: #ffffff;
-        /* White for contrast */
-    
-        --warning-color: #FBC02D;
-        /* Yellow */
-        --warning-text-color: #333333;
-        /* Dark gray for contrast */
+    --primary-color: #6A1B9A;
+    /* Rich purple */
+    --primary-text-color: #ffffff;
+    /* White for contrast */
+    --primary-hover-color: #7B1FA2;
+    /* A lighter shade of purple */
+    --primary-border-color: #9C27B0;
+    /* A complementary shade of purple */
+
+    /* Secondary color scheme */
+    --secondary-color: #009688;
+    /* Teal */
+    --secondary-text-color: #ffffff;
+    /* White for contrast */
+    --secondary-hover-color: #26A69A;
+    /* Lighter teal */
+    --secondary-border-color: #00897B;
+    /* Darker teal */
+
+    /* Background and text colors */
+    --background-color: #f4f4f4;
+    /* Light gray for background */
+    --text-color: #333333;
+    /* Dark gray for text */
+
+    /* Additional colors */
+    --success-color: #388E3C;
+    /* Green */
+    --success-text-color: #ffffff;
+    /* White for contrast */
+
+    --error-color: #D32F2F;
+    /* Red */
+    --error-text-color: #ffffff;
+    /* White for contrast */
+
+    --warning-color: #FBC02D;
+    /* Yellow */
+    --warning-text-color: #333333;
+    /* Dark gray for contrast */
 
     /* Spacing for spacious design */
     --spacing-compact: .5rem;
