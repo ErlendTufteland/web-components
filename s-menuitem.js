@@ -4,16 +4,16 @@ function defineMenuitemComponent(themeStyles) {
     <style>
         .menuitem {
             display: block;
-            color: white;
             text-align: center;
             padding: 14px 16px;
             text-decoration: none;
             cursor: pointer;
+            color: var(--primary-text-color);
         }
 
         .menuitem:hover {
-            background-color: #ddd;
-            color: black;
+            background-color: var(--primary-hover-color);
+            color: var(--primary-text-color);
         }
     </style>
     <li class="menuitem">

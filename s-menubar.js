@@ -3,33 +3,25 @@ function defineMenubarComponent(themeStyles) {
   menubarTemplate.innerHTML = `
     <style>
         .menubar {
-            display: flex; /* Set default display to flex */
+            display: flex;
             list-style-type: none;
             padding: 0;
             margin: 0;
-            background-color: #333;
+            background-color: var(--primary-color);
+            border: var(--border-width) solid var(--primary-border-color);
+            border-radius: var(--border-radius);
         }
 
-        .menuitem {
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .menuitem:hover {
-            background-color: #ddd;
-            color: black;
-        }
 
         .hamburger {
             display: none;
             cursor: pointer;
-            color: white;
+            color: var(--primary-text-color);
             padding: 14px 16px;
             text-align: center;
-            background-color: #333;
+            background-color: var(--primary-color);
+            border: var(--border-width) solid var(--primary-border-color);
+            border-radius: var(--border-radius);
         }
 
         @media screen and (max-width: 600px) {

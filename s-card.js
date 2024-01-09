@@ -3,25 +3,27 @@ function defineCardComponent(themeStyles) {
   cardTemplate.innerHTML = `
      <style>
         .card {
-            border: 1px solid var(--border-color);
+            border: var(--border-width) solid var(--secondary-border-color);
             border-radius: var(--border-radius);
             box-shadow: var(--box-shadow);
         }
 
         #title {
-            margin: 0
-
+          color: var(--primary-text-color);
+          background-color: var(--secondary-color);
+          margin: 0
         }
 
         #title, #header, #content, #footer {
             padding: var(--spacing);
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: var(--border-width) solid var(--secondary-border-color);
         }
 
-        /* Optional: Hover effect for the card */
-        .card:hover {
-            box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3);
+        #header, #content, #footer {
+            color: var(--text-color);
+            background-color: var(--background-color);
         }
+
     </style>
 
     <div class="card">
@@ -52,7 +54,7 @@ function defineCardComponent(themeStyles) {
       this.updateFooter();
     }
 
-    attributeChangedCallback(name, oldValue, newValue) {
+    attributeChangedCallback(name) {
       if (name === "title") {
         this.updateTitle();
       } else if (name === "header") {
