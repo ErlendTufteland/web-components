@@ -10,4 +10,6 @@ fetch("./theme.css")
     defineSMenubarComponent(themeStyles);
     defineSMenuitemComponent(themeStyles);
     defineSButtonComponent(themeStyles);
+    defineSTabsComponent(themeStyles);
+    defineSTabComponent(themeStyles);
   });

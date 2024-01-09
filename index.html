@@ -9,12 +9,17 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./theme.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    
+
     <script src="s-card.js" defer></script>
+
     <script src="s-menubar.js" defer></script>
     <script src="s-menuitem.js" defer></script>
+
     <script src="s-button.js" defer></script>
-    
+
+    <script src="s-tabs.js" defer></script>
+    <script src="s-tab.js" defer></script>
+
     <script src="index.js" defer></script>
 </head>
 
@@ -38,7 +43,7 @@
     <s-card title="Attributes And Content Slot" header="This is the Header" footer="this is the footer">
         this is the content
     </s-card>
-    
+
     <s-card>
         <template slot="title">
             Templates And Content Slot
@@ -62,10 +67,23 @@
     <h2>Buttons</h2>
     <s-button>Default</s-button>
     <s-button severity="primary">Primary</s-button>
-    <s-button severity="secondary">secondary</s-button>
-    <s-button severity="success">success</s-button>
-    <s-button severity="warning">warning</s-button>
-    <s-button severity="danger">danger</s-button>
+    <s-button severity="secondary">Secondary</s-button>
+    <s-button severity="success">Success</s-button>
+    <s-button severity="warning">Warning</s-button>
+    <s-button severity="danger">Danger</s-button>
+
+    <h2>Tabs</h2>
+    <s-tabs>
+        <s-tab title="Tab 1">
+            Content for Tab 1
+        </s-tab>
+        <s-tab title="Tab 2">
+            Content for Tab 2
+        </s-tab>
+        <s-tab title="Tab 3">
+            Content for Tab 3
+        </s-tab>
+    </s-tabs>
 
 
 </body>
