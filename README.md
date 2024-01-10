@@ -94,40 +94,40 @@ To customize the design system:
 - **Description**: The `s-table` component is a dynamic table element for displaying data in rows and columns. It supports customization and is designed to handle various types of data input efficiently.
 - **Usage**: Suitable for displaying structured data like financial figures, statistics, or lists in a clear and organized manner.
 
-### s-modal
-Description: The s-modal component is a customizable modal dialog box, perfect for displaying additional content, alerts, or forms on top of the main content. It supports easy opening and closing mechanisms and can be styled to match the look and feel of your application.
+#### s-modal
+- Description: The s-modal component is a customizable modal dialog box, perfect for displaying additional content, alerts, or forms on top of the main content. It supports easy opening and closing mechanisms and can be styled to match the look and feel of your application.
 
-Usage: Ideal for user interactions that require focus, like form submissions, confirmations, or detailed content viewing.
+- Usage: Ideal for user interactions that require focus, like form submissions, confirmations, or detailed content viewing.
 
-### s-sidemenu
-Description: The s-sidemenu component is a vertical, side navigation menu ideal for dashboard layouts and admin interfaces. It provides a sleek, space-efficient way to organize and access different sections of a website.
+#### s-sidemenu
+- Description: The s-sidemenu component is a vertical, side navigation menu ideal for dashboard layouts and admin interfaces. It provides a sleek, space-efficient way to organize and access different sections of a website.
 
-Usage: Best suited for applications with complex navigation requirements, such as admin panels, documentation sites, or web applications with multiple user settings.
+- Usage: Best suited for applications with complex navigation requirements, such as admin panels, documentation sites, or web applications with multiple user settings.
 
-### s-input
-Description: The s-input component is a stylized input field that supports various types, including text, password, email, and number. It offers enhanced visual appeal and consistent styling across different form elements.
+#### s-input
+- Description: The s-input component is a stylized input field that supports various types, including text, password, email, and number. It offers enhanced visual appeal and consistent styling across different form elements.
 
-Usage: Useful for creating forms, search bars, login fields, and other input-driven interfaces.
+- Usage: Useful for creating forms, search bars, login fields, and other input-driven interfaces.
 
-### s-messages
-Description: The s-messages component allows for displaying overlay messages in a non-intrusive manner. It's great for feedback on user actions, such as successful form submissions, warnings, or error messages.
+#### s-messages
+- Description: The s-messages component allows for displaying overlay messages in a non-intrusive manner. It's great for feedback on user actions, such as successful form submissions, warnings, or error messages.
 
-Usage: Can be used across your application to provide timely and contextual feedback to users, enhancing the overall user experience.
+- Usage: Can be used across your application to provide timely and contextual feedback to users, enhancing the overall user experience.
 
-### s-checkbox
-Description: The s-checkbox component is a custom, stylized checkbox input. It provides a modern look and feel while retaining all standard functionalities of a traditional checkbox.
+#### s-checkbox
+- Description: The s-checkbox component is a custom, stylized checkbox input. It provides a modern look and feel while retaining all standard functionalities of a traditional checkbox.
 
-Usage: Ideal for forms, settings, and anywhere you need users to make a binary choice.
+- Usage: Ideal for forms, settings, and anywhere you need users to make a binary choice.
 
-### s-code
-Description: The s-code component is designed for displaying blocks of code with syntax highlighting and proper formatting. It helps in making code snippets more readable and visually appealing.
+#### s-code
+- Description: The s-code component is designed for displaying blocks of code with syntax highlighting and proper formatting. It helps in making code snippets more readable and visually appealing.
 
-Usage: Great for documentation, tutorials, or any application where displaying formatted code is necessary.
+- Usage: Great for documentation, tutorials, or any application where displaying formatted code is necessary.
 
-### s-select
-Description: The s-select component is a custom dropdown select element that mimics the functionality of the standard HTML select tag. It comes with enhanced styling and is fully customizable to fit any application's design system.
+#### s-select
+- Description: The s-select component is a custom dropdown select element that mimics the functionality of the standard HTML select tag. It comes with enhanced styling and is fully customizable to fit any application's design system.
 
-Usage: Perfect for forms, filters, and any interface where users need to choose from a list of options.
+- Usage: Perfect for forms, filters, and any interface where users need to choose from a list of options.
 
 ### Integration and Usage
 The components are designed to be straightforward to integrate into any project. Simply import the necessary components into your project, and they're ready to use. They can also be easily extended or modified to fit specific requirements.
