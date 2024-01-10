@@ -10,6 +10,7 @@ import { defineSInputComponent } from "./s-input";
 import { defineSMessagesComponent } from "./s-messages";
 import { defineSCheckboxComponent } from "./s-checkbox";
 import { defineSCodeComponent } from "./s-code";
+import { defineSSideMenuComponent } from "./s-sidemenu";
 
 export function defineWebComponents() {
   return fetch("./theme.css")
@@ -30,5 +31,6 @@ export function defineWebComponents() {
       defineSMessagesComponent(themeStyles);
       defineSCheckboxComponent(themeStyles);
       defineSCodeComponent(themeStyles);
+      defineSSideMenuComponent(themeStyles);
     });
 };
