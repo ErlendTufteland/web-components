@@ -6,7 +6,7 @@ Please note that this project is currently a work in progress and not yet comple
 
 ## Overview
 
-[Showcase]([https://nodejs.org/](https://crypticlon.github.io/web-components/)) 
+[Showcase](https://crypticlon.github.io/web-components/) 
 
 
 This project focuses on creating a versatile and easily adaptable design system using Web Components. The core philosophy of this design system is to enable rapid customization across any project by modifying just a few CSS variables. Each component in this system utilizes these shared theme CSS variables, ensuring a consistent look and feel while offering the flexibility to tailor the design to different needs and branding guidelines.
