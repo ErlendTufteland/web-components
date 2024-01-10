@@ -22,7 +22,11 @@ export function defineSCodeComponent(themeStyles: CSSStyleSheet) {
         display: block; /* Ensure block-level display */
       }
     </style>
-    <pre><code><slot></slot></code></pre>
+    <pre>
+      <code>
+        <slot></slot>
+      </code>
+    </pre>
   `;
 
   class SCode extends HTMLElement {

@@ -35,6 +35,12 @@
     /* Light gray for background */
     --content-text-color: #333333;
     /* Dark gray for text */
+    --content-hover-background-color: #e0e0e0;
+    /* Keeping text color same for hover */
+    --content-active-background-color: #cacaca;
+    /* Even darker for active state */
+    --content-border-color: #a0a0a0;
+    /* A mid-tone gray for borders */
 
     /* Additional colors */
     --success-color: #388E3C;

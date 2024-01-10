@@ -19,7 +19,8 @@ export function defineSOverlayPanelComponent(themeStyles: CSSStyleSheet) {
       .dropdown-content {
         display: none;
         position: absolute;
-        background-color: var(--primary-color);
+        background-color: var(--content-background-color);
+        color: var(--content-text-color);
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;

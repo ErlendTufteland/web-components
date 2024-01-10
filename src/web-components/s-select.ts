@@ -4,19 +4,15 @@ export function defineSSelectComponent(themeStyles: CSSStyleSheet) {
     <style>
       .custom-select {
         position: relative;
-        font-family: Arial;
-      }
-
-      .custom-select select {
-        display: none;
+        width: 200px;
       }
 
       .select-selected {
-        background-color: DodgerBlue;
+        background-color: var(--primary-color);
+        border-radius: var(--border-radius);
         color: white;
         padding: 8px 16px;
         border: 1px solid transparent;
-        border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
         cursor: pointer;
         user-select: none;
       }
@@ -38,7 +34,6 @@ export function defineSSelectComponent(themeStyles: CSSStyleSheet) {
       }
 
       .select-items div, .select-selected {
-        color: white;
         padding: 8px 16px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         cursor: pointer;
@@ -47,25 +42,25 @@ export function defineSSelectComponent(themeStyles: CSSStyleSheet) {
 
       .select-items {
         position: absolute;
-        background-color: DodgerBlue;
+        background-color: var(--content-background-color);
+        color: var(--content-text-color);
         top: 100%;
         left: 0;
         right: 0;
         z-index: 99;
       }
 
+      .select-items div:hover, .same-as-selected {
+        background-color: var(--content-hover-background-color);
+      }
+
       .select-hide {
         display: none;
       }
-
-      .select-items div:hover, .same-as-selected {
-        background-color: rgba(0, 0, 0, 0.1);
-      }
     </style>
-    <div class="custom-select" style="width:200px;">
-      <select>
-        <slot></slot>
-      </select>
+    <div class="custom-select">
+      <div class="select-selected"></div>
+      <div class="select-items select-hide"></div>
     </div>
   `;
 
@@ -82,46 +77,51 @@ export function defineSSelectComponent(themeStyles: CSSStyleSheet) {
 
     initCustomSelect() {
       if (!this.shadowRoot) return;
-      const selectElement = this.shadowRoot.querySelector("select");
-      if (!selectElement) return;
-      const selectedDiv = document.createElement("div");
-      selectedDiv.setAttribute("class", "select-selected");
-      selectedDiv.innerHTML =
-        selectElement.options[selectElement.selectedIndex].innerHTML;
-      this.shadowRoot.appendChild(selectedDiv);
+      const options = this.getOptions();
+      const selectedDiv = this.shadowRoot.querySelector(".select-selected");
+      if (!selectedDiv) return;
+      const optionsContainer = this.shadowRoot.querySelector(".select-items");
+      if (!optionsContainer) return;
 
-      const optionsContainer = document.createElement("div");
-      optionsContainer.setAttribute("class", "select-items select-hide");
+      // Set the first option as selected
+      selectedDiv.innerHTML = options[0];
 
-      for (let i = 1; i < selectElement.length; i++) {
+      options.forEach((option, index) => {
         const optionDiv = document.createElement("div");
-        optionDiv.innerHTML = selectElement.options[i].innerHTML;
-        optionDiv.addEventListener("click", (e: Event) => {
-          const target = e.target as HTMLDivElement;
-          selectedDiv.innerHTML = target.innerHTML;
-          selectElement.selectedIndex = i;
+        optionDiv.innerHTML = option;
+        optionDiv.addEventListener("click", () => {
+          selectedDiv.innerHTML = option;
           this.closeAllSelect();
         });
         optionsContainer.appendChild(optionDiv);
-      }
-
-      this.shadowRoot.appendChild(optionsContainer);
+      });
 
       selectedDiv.addEventListener("click", (e) => {
         e.stopPropagation();
         this.closeAllSelect(selectedDiv);
-        optionsContainer.classList.toggle("select-hide");
+        // optionsContainer.classList.toggle("select-hide");
         selectedDiv.classList.toggle("select-arrow-active");
       });
     }
 
-    closeAllSelect(exceptThisOne: HTMLDivElement | null = null) {
+    getOptions(): string[] {
+      const options: string[] = [];
+      // Assuming that options are passed as direct children of <s-select>
+      Array.from(this.children).forEach((child) => {
+        if (child.tagName === "OPTION") {
+          options.push(child.innerHTML);
+        }
+      });
+      return options;
+    }
+
+    closeAllSelect(exceptThisOne: null | Element = null) {
       if (!this.shadowRoot) return;
       const allSelectItems = this.shadowRoot.querySelectorAll(".select-items");
       const allSelected = this.shadowRoot.querySelectorAll(".select-selected");
       allSelectItems.forEach((item) => {
         if (item !== exceptThisOne) {
-          item.classList.add("select-hide");
+          item.classList.toggle("select-hide");
         }
       });
       allSelected.forEach((item) => {
