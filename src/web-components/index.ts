@@ -6,6 +6,7 @@ import { defineSTabsComponent } from "./s-tabs";
 import { defineSTabComponent } from "./s-tab";
 import { defineSTableComponent } from "./s-table";
 import { defineSModalComponent } from "./s-modal";
+import { defineSInputComponent } from "./s-input";
 
 export function defineWebComponents() {
   return fetch("./theme.css")
@@ -22,5 +23,6 @@ export function defineWebComponents() {
       defineSTabComponent(themeStyles);
       defineSTableComponent(themeStyles);
       defineSModalComponent(themeStyles);
+      defineSInputComponent(themeStyles);
     });
 };

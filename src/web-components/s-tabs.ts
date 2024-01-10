@@ -13,7 +13,7 @@ export function defineSTabsComponent(themeStyles: CSSStyleSheet) {
       .tab-button {
         cursor: pointer;
         padding: var(--spacing);
-        background-color: var(--secondary-color);
+        background-color: var(--primary-color);
         color: var(--secondary-text-color);
         border: none;
         border-bottom: 4px solid transparent;
@@ -22,7 +22,7 @@ export function defineSTabsComponent(themeStyles: CSSStyleSheet) {
       }
 
       .tab-button.active {
-        border-bottom-color: var(--secondary-active-color);
+        border-bottom-color: var(--primary-active-color);
       }
 
       .tab-content {
@@ -30,7 +30,7 @@ export function defineSTabsComponent(themeStyles: CSSStyleSheet) {
         padding: var(--spacing);
         background-color: var(--content-background-color);
         color: var(--content-text-color);
-        border: var(--border-width) solid var(--secondary-border-color);
+        border: var(--border-width) solid var(--primary-border-color);
         border-radius: 0 var(--border-radius) var(--border-radius) var(--border-radius);
       }
 

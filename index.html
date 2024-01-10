@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Web Components</title>
     <link rel="stylesheet" href="./src/theme.css">
-    <link rel="icon" href="./src/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <script type="module" src="/src/index.ts" defer></script>
 </head>
 
@@ -36,18 +36,18 @@
         <template slot="title">
             Templates And Body Slot
         </template>
-
+    
         <template slot="header">
-            <div>
-                <h2>This is a template Header</h2>
-                <p>header</p>
-            </div>
+            <img src="./placeholder.png" height="150px">
         </template>
-        this is the body
+    
+        <s-input type="text" placeholder="Enter your first name" value="John" style=" margin-bottom:1rem"></s-input>
+        <s-input type="text" placeholder="Enter your last name" value=" Doe"></s-input>
+
         <template slot="footer">
-            <div>
-                <h3>This is a template Footer</h3>
-                <p>Footer</p>
+            <div style="display: flex; justify-content: space-between;">
+                <s-button severity="danger">Cancel</s-button>
+                <s-button severity="success">Save</s-button>
             </div>
         </template>
     </s-card>
@@ -86,9 +86,21 @@
     <s-button onclick="document.getElementById('templateModal').show()">Open Templates Modal</s-button>
     <s-modal id="templateModal">
         <template slot="title">Modal Title</template>
-        This is the modal body
-        <template slot="footer">Footer content</template>
+
+        <s-input type="text" placeholder="Enter your first name" value="John" style=" margin-bottom:1rem"></s-input>
+        <s-input type="text" placeholder="Enter your last name" value=" Doe"></s-input>
+
+        <template slot="footer">
+            <div style="display: flex; justify-content: space-between;">
+                <s-button severity="danger">Cancel</s-button>
+                <s-button severity="success">Save</s-button>
+            </div>
+        </template>
     </s-modal>
+
+    <h2>Input</h2>
+    <s-input type="text" placeholder="Enter your name" value="John Doe"></s-input>
+
 
 
 
