@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Web Components</title>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  <script type="module" crossorigin src="/web-components/assets/index-LejMc8H2.js"></script>
+  <script type="module" crossorigin src="/web-components/assets/index-6qwpCfy9.js"></script>
   <link rel="stylesheet" crossorigin href="/web-components/assets/index-kFOmffPm.css">
 </head>
 
@@ -36,11 +36,11 @@
         <template slot="title">
             Templates And Body Slot
         </template>
-    
+
         <template slot="header">
             <img src="./placeholder.png" height="150px">
         </template>
-    
+
         <s-input type="text" placeholder="Enter your first name" value="John" style=" margin-bottom:1rem"></s-input>
         <s-input type="text" placeholder="Enter your last name" value=" Doe"></s-input>
 
@@ -92,7 +92,7 @@
 
         <template slot="footer">
             <div style="display: flex; justify-content: space-between;">
-                <s-button severity="danger">Cancel</s-button>
+                <s-button onclick="document.getElementById('templateModal').hide()" severity="danger">Cancel</s-button>
                 <s-button severity="success">Save</s-button>
             </div>
         </template>
@@ -101,9 +101,20 @@
     <h2>Input</h2>
     <s-input type="text" placeholder="Enter your name" value="John Doe"></s-input>
 
+    <h2>Messages</h2>
+    <s-messages id="messageBox"></s-messages>
+    <s-button severity="success" id="successButton">Success message</s-button>
+    <s-button severity="warning" id="warningButton">Warning message</s-button>
+    <s-button severity="danger"  id="dangerButton">Danger message</s-button>
 
+    <h2>Checkbox</h2>
+    <s-checkbox id="myCheckbox">Agree to terms and conditions</s-checkbox>
 
-
+    <h2>Code</h2>
+    <s-code>
+        const x = 10;
+        console.log(x);
+    </s-code>
 </body>
 
 </html>
