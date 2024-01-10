@@ -11,6 +11,8 @@ import { defineSMessagesComponent } from "./s-messages";
 import { defineSCheckboxComponent } from "./s-checkbox";
 import { defineSCodeComponent } from "./s-code";
 import { defineSSideMenuComponent } from "./s-sidemenu";
+import { defineSOverlayPanelComponent } from "./s-overlaypanel";
+import { defineSSelectComponent } from "./s-select";
 
 export function defineWebComponents() {
   return fetch("./theme.css")
@@ -32,5 +34,7 @@ export function defineWebComponents() {
       defineSCheckboxComponent(themeStyles);
       defineSCodeComponent(themeStyles);
       defineSSideMenuComponent(themeStyles);
+      defineSOverlayPanelComponent(themeStyles);
+      defineSSelectComponent(themeStyles);
     });
 };

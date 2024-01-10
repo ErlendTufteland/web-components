@@ -8,6 +8,7 @@ export function defineSMenuitemComponent(themeStyles: CSSStyleSheet) {
             padding: 14px 16px;
             text-decoration: none;
             cursor: pointer;
+            background-color: var(--primary-color);
             color: var(--primary-text-color);
         }
 
