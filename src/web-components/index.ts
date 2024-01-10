@@ -7,6 +7,8 @@ import { defineSTabComponent } from "./s-tab";
 import { defineSTableComponent } from "./s-table";
 import { defineSModalComponent } from "./s-modal";
 import { defineSInputComponent } from "./s-input";
+import { defineSMessagesComponent } from "./s-messages";
+import { defineSCheckboxComponent } from "./s-checkbox";
 
 export function defineWebComponents() {
   return fetch("./theme.css")
@@ -24,5 +26,7 @@ export function defineWebComponents() {
       defineSTableComponent(themeStyles);
       defineSModalComponent(themeStyles);
       defineSInputComponent(themeStyles);
+      defineSMessagesComponent(themeStyles);
+      defineSCheckboxComponent(themeStyles);
     });
 };

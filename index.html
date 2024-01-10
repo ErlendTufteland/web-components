@@ -36,11 +36,11 @@
         <template slot="title">
             Templates And Body Slot
         </template>
-    
+
         <template slot="header">
             <img src="./placeholder.png" height="150px">
         </template>
-    
+
         <s-input type="text" placeholder="Enter your first name" value="John" style=" margin-bottom:1rem"></s-input>
         <s-input type="text" placeholder="Enter your last name" value=" Doe"></s-input>
 
@@ -101,9 +101,14 @@
     <h2>Input</h2>
     <s-input type="text" placeholder="Enter your name" value="John Doe"></s-input>
 
+    <h2>Messages</h2>
+    <s-messages id="messageBox"></s-messages>
+    <s-button severity="success" id="successButton">Success message</s-button>
+    <s-button severity="warning" id="warningButton">Warning message</s-button>
+    <s-button severity="danger"  id="dangerButton">Danger message</s-button>
 
-
-
+    <h2>Checkbox</h2>
+    <s-checkbox id="myCheckbox">Agree to terms and conditions</s-checkbox>
 </body>
 
 </html>
