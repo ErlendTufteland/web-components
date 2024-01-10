@@ -7,141 +7,169 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Web Components</title>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  <script type="module" crossorigin src="/web-components/assets/index-0OKwzhnl.js"></script>
+  <script type="module" crossorigin src="/web-components/assets/index-PsajdCJY.js"></script>
   <link rel="stylesheet" crossorigin href="/web-components/assets/index-jW40w762.css">
 </head>
 
 <body>
-    <div style="display:flex; justify-content: center;">
-    <div class="col-8">
-    <main>
-        <h1>Web Components</h1>
-    </main>
-    
+    <div style="display:flex; justify-content: center; padding-bottom: 300px;">
+        <div class="col-8">
 
-    <h2>Menu Bar</h2>
-    <s-menubar>
-        <a href="#card"><s-menuitem>Card</s-menuitem></a>
-        <a href="#buttons"><s-menuitem>Buttons</s-menuitem></a>
-        <a href="#tabs"><s-menuitem>Tabs</s-menuitem></a>
-        <a href="#table"><s-menuitem>Table</s-menuitem></a>
-        <a href="#modal"><s-menuitem>Modal</s-menuitem></a>
-        <a href="#input"><s-menuitem>Input</s-menuitem></a>
-        <a href="#messages"><s-menuitem>Messages</s-menuitem></a>
-        <a href="#checkbox"><s-menuitem>Checkbox</s-menuitem></a>
-        <a href="#code"><s-menuitem>Code</s-menuitem></a>
-    </s-menubar>
+            <main>
+                <h1>Web Components</h1>
+            </main>
 
-    <h2> Side Menu</h2>
-    <s-sidemenu>
-        <a href="#card"><s-menuitem>Card</s-menuitem></a>
-        <a href="#buttons"><s-menuitem>Buttons</s-menuitem></a>
-        <a href="#tabs"><s-menuitem>Tabs</s-menuitem></a>
-        <a href="#table"><s-menuitem>Table</s-menuitem></a>
-        <a href="#modal"><s-menuitem>Modal</s-menuitem></a>
-        <a href="#input"><s-menuitem>Input</s-menuitem></a>
-        <a href="#messages"><s-menuitem>Messages</s-menuitem></a>
-        <a href="#checkbox"><s-menuitem>Checkbox</s-menuitem></a>
-        <a href="#code"><s-menuitem>Code</s-menuitem></a>
-    </s-sidemenu>
+            <h2>Menu Bar</h2>
+            <s-menubar>
+                <a href="#card"><s-menuitem>Card</s-menuitem></a>
+                <a href="#buttons"><s-menuitem>Buttons</s-menuitem></a>
+                <a href="#tabs"><s-menuitem>Tabs</s-menuitem></a>
+                <a href="#table"><s-menuitem>Table</s-menuitem></a>
+                <a href="#modal"><s-menuitem>Modal</s-menuitem></a>
+                <a href="#input"><s-menuitem>Input</s-menuitem></a>
+                <a href="#messages"><s-menuitem>Messages</s-menuitem></a>
+                <a href="#checkbox"><s-menuitem>Checkbox</s-menuitem></a>
+                <a href="#code"><s-menuitem>Code</s-menuitem></a>
+                <a href="#select"><s-menuitem>Select</s-menuitem></a>
+            </s-menubar>
 
-    <h2 id="card">Card</h2>
-    <s-card title="Title Attribute And Body Slot">
-        this is the body
-    </s-card>
+            <h2> Side Menu</h2>
+            &larr; Look to the left
 
-    <s-card title="Attributes And Body Slot" header="This is the Header" footer="this is the footer">
-        this is the body
-    </s-card>
+            <s-sidemenu>
+                <a href="#card"><s-menuitem>Card</s-menuitem></a>
+                <a href="#buttons"><s-menuitem>Buttons</s-menuitem></a>
+                <a href="#tabs"><s-menuitem>Tabs</s-menuitem></a>
+                <a href="#table"><s-menuitem>Table</s-menuitem></a>
+                <a href="#modal"><s-menuitem>Modal</s-menuitem></a>
+                <a href="#input"><s-menuitem>Input</s-menuitem></a>
+                <a href="#messages"><s-menuitem>Messages</s-menuitem></a>
+                <a href="#checkbox"><s-menuitem>Checkbox</s-menuitem></a>
+                <a href="#code"><s-menuitem>Code</s-menuitem></a>
+                <a href="#overlaypanel"><s-menuitem>Overlay Panel</s-menuitem></a>
+                <a href="#select"><s-menuitem>Select</s-menuitem></a>
+            </s-sidemenu>
 
-    <s-card>
-        <template slot="title">
-            Templates And Body Slot
-        </template>
+            <h2 id="card">Card</h2>
+            <s-card title="Title Attribute And Body Slot">
+                this is the body
+            </s-card>
 
-        <template slot="header">
-            <img src="./placeholder.png" height="150px">
-        </template>
+            <s-card title="Attributes And Body Slot" header="This is the Header" footer="this is the footer">
+                this is the body
+            </s-card>
 
-        <s-input type="text" placeholder="Enter your first name" value="John" style=" margin-bottom:1rem"></s-input>
-        <s-input type="text" placeholder="Enter your last name" value=" Doe"></s-input>
+            <s-card>
+                <template slot="title">
+                    Templates And Body Slot
+                </template>
 
-        <template slot="footer">
-            <div style="display: flex; justify-content: space-between;">
-                <s-button severity="danger">Cancel</s-button>
-                <s-button severity="success">Save</s-button>
-            </div>
-        </template>
-    </s-card>
+                <template slot="header">
+                    <img src="./placeholder.png" height="150px">
+                </template>
 
-    <h2 id="buttons">Buttons</h2>
-    <s-button>Default</s-button>
-    <s-button severity="primary">Primary</s-button>
-    <s-button severity="secondary">Secondary</s-button>
-    <s-button severity="success">Success</s-button>
-    <s-button severity="warning">Warning</s-button>
-    <s-button severity="danger">Danger</s-button>
+                <s-input type="text" placeholder="Enter your first name" value="John"
+                    style=" margin-bottom:1rem"></s-input>
+                <s-input type="text" placeholder="Enter your last name" value=" Doe"></s-input>
 
-    <h2 id="tabs">Tabs</h2>
-    <s-tabs>
-        <s-tab title="Tab 1">
-            Content for Tab 1
-        </s-tab>
-        <s-tab title="Tab 2">
-            Content for Tab 2
-        </s-tab>
-        <s-tab title="Tab 3">
-            Content for Tab 3
-        </s-tab>
-    </s-tabs>
+                <template slot="footer">
+                    <div style="display: flex; justify-content: space-between;">
+                        <s-button severity="danger">Cancel</s-button>
+                        <s-button severity="success">Save</s-button>
+                    </div>
+                </template>
+            </s-card>
 
-    <h2 id="table">Table</h2>
-    <s-table></s-table>
+            <h2 id="buttons">Buttons</h2>
+            <s-button>Default</s-button>
+            <s-button severity="primary">Primary</s-button>
+            <s-button severity="secondary">Secondary</s-button>
+            <s-button severity="success">Success</s-button>
+            <s-button severity="warning">Warning</s-button>
+            <s-button severity="danger">Danger</s-button>
 
-    <h2 id="modal">Modal</h2>
-    <s-button onclick="document.getElementById('attributeModal').show()">Open Attributes Modal</s-button>
-    <s-modal id="attributeModal" title="Modal Title" footer="Footer content">
-        This is the modal content
-    </s-modal>
+            <h2 id="tabs">Tabs</h2>
+            <s-tabs>
+                <s-tab title="Tab 1">
+                    Content for Tab 1
+                </s-tab>
+                <s-tab title="Tab 2">
+                    Content for Tab 2
+                </s-tab>
+                <s-tab title="Tab 3">
+                    Content for Tab 3
+                </s-tab>
+            </s-tabs>
 
+            <h2 id="table">Table</h2>
+            <s-table></s-table>
 
-    <s-button onclick="document.getElementById('templateModal').show()">Open Templates Modal</s-button>
-    <s-modal id="templateModal">
-        <template slot="title">Modal Title</template>
-
-        <s-input type="text" placeholder="Enter your first name" value="John" style=" margin-bottom:1rem"></s-input>
-        <s-input type="text" placeholder="Enter your last name" value=" Doe"></s-input>
-
-        <template slot="footer">
-            <div style="display: flex; justify-content: space-between;">
-                <s-button onclick="document.getElementById('templateModal').hide()" severity="danger">Cancel</s-button>
-                <s-button severity="success">Save</s-button>
-            </div>
-        </template>
-    </s-modal>
-
-    <h2 id="input">Input</h2>
-    <s-input type="text" placeholder="Enter your name" value="John Doe"></s-input>
-
-    <h2 id="messages">Messages</h2>
-    <s-messages id="messageBox"></s-messages>
-    <s-button severity="success" id="successButton">Success message</s-button>
-    <s-button severity="warning" id="warningButton">Warning message</s-button>
-    <s-button severity="danger"  id="dangerButton">Danger message</s-button>
-
-    <h2 id="checkbox">Checkbox</h2>
-    <s-checkbox id="myCheckbox">Agree to terms and conditions</s-checkbox>
-
-    <h2 id="code">Code</h2>
-    <s-code>
-        const x = 10;
-        console.log(x);
-    </s-code>
-
-  
+            <h2 id="modal">Modal</h2>
+            <s-button onclick="document.getElementById('attributeModal').show()">Open Attributes Modal</s-button>
+            <s-modal id="attributeModal" title="Modal Title" footer="Footer content">
+                This is the modal content
+            </s-modal>
 
 
-    </div>
+            <s-button onclick="document.getElementById('templateModal').show()">Open Templates Modal</s-button>
+            <s-modal id="templateModal">
+                <template slot="title">Modal Title</template>
+
+                <s-input type="text" placeholder="Enter your first name" value="John"
+                    style=" margin-bottom:1rem"></s-input>
+                <s-input type="text" placeholder="Enter your last name" value=" Doe"></s-input>
+
+                <template slot="footer">
+                    <div style="display: flex; justify-content: space-between;">
+                        <s-button onclick="document.getElementById('templateModal').hide()"
+                            severity="danger">Cancel</s-button>
+                        <s-button severity="success">Save</s-button>
+                    </div>
+                </template>
+            </s-modal>
+
+            <h2 id="input">Input</h2>
+            <s-input type="text" placeholder="Enter your name" value="John Doe"></s-input>
+
+            <h2 id="messages">Messages</h2>
+            <s-messages id="messageBox"></s-messages>
+            <s-button severity="success" id="successButton">Success message</s-button>
+            <s-button severity="warning" id="warningButton">Warning message</s-button>
+            <s-button severity="danger" id="dangerButton">Danger message</s-button>
+
+            <h2 id="checkbox">Checkbox</h2>
+            <s-checkbox id="myCheckbox">Agree to terms and conditions</s-checkbox>
+
+            <h2 id="code">Code</h2>
+            <s-code>
+                const x = 10;
+                console.log(x);
+            </s-code>
+
+            <h2 id="overlaypanel">OverlayPanel</h2>
+            <s-overlaypanel>
+                <a href="#card"><s-menuitem>Card</s-menuitem></a>
+                <a href="#buttons"><s-menuitem>Buttons</s-menuitem></a>
+                <a href="#tabs"><s-menuitem>Tabs</s-menuitem></a>
+                <a href="#table"><s-menuitem>Table</s-menuitem></a>
+                <a href="#modal"><s-menuitem>Modal</s-menuitem></a>
+                <a href="#input"><s-menuitem>Input</s-menuitem></a>
+                <a href="#messages"><s-menuitem>Messages</s-menuitem></a>
+                <a href="#checkbox"><s-menuitem>Checkbox</s-menuitem></a>
+                <a href="#code"><s-menuitem>Code</s-menuitem></a>
+                <a href="#dropdown"><s-menuitem>Dropdown</s-menuitem></a>
+            </s-overlaypanel>
+
+            <!-- <h2 id="select">Select</h2>
+            <s-select>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+            </s-select> -->
+
+
+
+
+        </div>
 
 
     </div>
