@@ -9,11 +9,10 @@ export function defineSCodeComponent(themeStyles: CSSStyleSheet) {
 
       pre {
         margin: 0; /* Reset default margin */
-        padding: 1rem;
         color: var(--content-text-color);
         background-color: var(--content-background-color);
         border: 1px solid var(--primary-border-color);
-        border-radius: 4px;
+        border-radius: var(--border-radius);
         overflow-x: auto;
         white-space: pre-wrap; /* Handle whitespace */
       }

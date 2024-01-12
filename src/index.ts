@@ -1,4 +1,4 @@
-import { defineWebComponents } from "./web-components/index";
+import { defineWebComponents } from "./web-components/web-components";
 import { SMessagesElement } from "./web-components/s-messages";
 import { TableData } from "./web-components/s-table";
 

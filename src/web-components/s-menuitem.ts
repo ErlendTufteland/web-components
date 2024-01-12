@@ -10,6 +10,9 @@ export function defineSMenuitemComponent(themeStyles: CSSStyleSheet) {
             cursor: pointer;
             background-color: var(--primary-color);
             color: var(--primary-text-color);
+            font-size: var(--button-font-size, 1rem);
+            font-weight: var(--button-font-weight, 700);
+            font-family: var(--font-family);
         }
 
         .menuitem:hover {

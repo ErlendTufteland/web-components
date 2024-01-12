@@ -15,6 +15,7 @@ export function defineSSideMenuComponent(themeStyles: CSSStyleSheet) {
         
         transition: width 0.3s; /* Smooth transition for width */
         z-index: 1000; /* Ensure it's above other content */
+            font-family: var(--font-family);
       }
 
       .s-sidemenu {
@@ -27,10 +28,13 @@ export function defineSSideMenuComponent(themeStyles: CSSStyleSheet) {
         top: 10px;
         left: 100%; /* Position right outside the menu */
         background-color: var(--primary-color);
+        padding: var(--spacing);
         border: none;
         cursor: pointer;
         padding: 10px;
         border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+        font-size: var(--button-font-size, 1rem);
+        font-weight: var(--button-font-weight, 700);
       }
 
       .toggle-button:hover {
@@ -38,8 +42,9 @@ export function defineSSideMenuComponent(themeStyles: CSSStyleSheet) {
       }
 
       .icon {
-        /* Style for your icon (e.g., arrow or hamburger icon) */
+        color: var(--primary-text-color);
       }
+      
     </style>
     <button class="toggle-button">
       <span class="icon">☰</span> <!-- Replace with your icon -->

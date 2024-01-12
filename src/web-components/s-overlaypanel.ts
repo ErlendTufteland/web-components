@@ -10,10 +10,13 @@ export function defineSOverlayPanelComponent(themeStyles: CSSStyleSheet) {
       .dropdown-button {
         background-color: var(--primary-color);
         color: var(--primary-text-color);
-        padding: 10px;
+        padding: var(--spacing);
         border: none;
         cursor: pointer;
         border-radius: var(--border-radius);
+        font-size: var(--button-font-size, 1rem);
+        font-weight: var(--button-font-weight, 700);
+        font-family: var(--font-family);
       }
 
       .dropdown-content {

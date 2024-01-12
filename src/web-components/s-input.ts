@@ -8,12 +8,13 @@ export function defineSInputComponent(themeStyles: CSSStyleSheet) {
 
       input {
         box-sizing: border-box;
-        padding: 0.5rem;
+        padding: var(--spacing);
         border: 1px solid var(--primary-border-color);
         border-radius: var(--border-radius, 4px);
-        font-size: 1rem;
         background-color: var(--content-background-color);
         width: 100%;
+        font-size: var(--input-font-size, 1rem);
+        font-family: var(--font-family);
       }
 
       input:focus {

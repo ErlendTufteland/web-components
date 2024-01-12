@@ -4,7 +4,6 @@ export function defineSCheckboxComponent(themeStyles: CSSStyleSheet) {
     <style>
       :host {
         display: inline-block;
-        font-family: sans-serif;
       }
 
       .checkbox-container {

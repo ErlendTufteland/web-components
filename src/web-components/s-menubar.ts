@@ -17,11 +17,14 @@ export function defineSMenubarComponent(themeStyles: CSSStyleSheet) {
             display: none;
             cursor: pointer;
             color: var(--primary-text-color);
-            padding: 14px 16px;
             text-align: center;
             background-color: var(--primary-color);
             border: var(--border-width) solid var(--primary-border-color);
             border-radius: var(--border-radius);
+            font-size: var(--button-font-size, 1rem);
+            padding: var(--spacing);
+            font-family: var(--font-family);
+            font-weight: var(--button-font-weight, 700);
         }
 
         @media screen and (max-width: 600px) {

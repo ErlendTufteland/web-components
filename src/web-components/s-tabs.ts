@@ -19,6 +19,9 @@ export function defineSTabsComponent(themeStyles: CSSStyleSheet) {
         border-bottom: 4px solid transparent;
         border-radius: var(--border-radius) var(--border-radius) 0 0;
         margin-right: .25rem;
+        font-size: var(--button-font-size, 1rem);
+        font-weight: var(--button-font-weight, 700);
+        font-family: var(--font-family);
       }
 
       .tab-button.active {

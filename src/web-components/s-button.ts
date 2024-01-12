@@ -12,6 +12,8 @@ export function defineSButtonComponent(themeStyles: CSSStyleSheet) {
         border-radius: var(--border-radius);
         cursor: pointer;
         transition: background-color 0.3s;
+        font-size: var(--button-font-size, 1rem);
+        font-weight: var(--button-font-weight, 700);
       }
 
       .button:hover {
@@ -47,6 +49,7 @@ export function defineSButtonComponent(themeStyles: CSSStyleSheet) {
         background-color: var(--error-color);
         color: var(--error-text-color);
       }
+   
 
     </style>
 

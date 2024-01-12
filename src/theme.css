@@ -69,6 +69,13 @@
     --border-radius: 0.4rem;
     --border-width: 1px;
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    --button-font-size: 1rem;
+    --input-font-size: 1rem;
+
+    --button-font-weight: 500;
+    --font-family: 'Roboto', sans-serif;
+    --header-font-family: 'Roboto', sans-serif;
 }
 
 html, body {
@@ -77,6 +84,7 @@ html, body {
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
+    font-family: var(--font-family);
 }
 
 .primary-bg {
@@ -87,4 +95,101 @@ html, body {
 .secondary-bg {
     background-color: var(--secondary-color);
     color: var(--secondary-text-color);
+}
+
+html {
+    font-size: 100%;
+    /* equivalent to 16px */
+}
+
+body {
+    font-size: 0.875rem;
+    /* typically around 14px */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--header-font-family);
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.5rem;
+    /* around 40px */
+}
+
+h2 {
+    font-size: 2rem;
+    /* around 32px */
+}
+
+h3 {
+    font-size: 1.75rem;
+    /* around 28px */
+}
+
+h4 {
+    font-size: 1.5rem;
+    /* around 24px */
+}
+
+h5 {
+    font-size: 1.25rem;
+    /* around 20px */
+}
+
+h6 {
+    font-size: 1rem;
+    /* around 16px, can be same as body text */
+}
+
+.small-text {
+    font-size: 0.75rem;
+    /* around 12px */
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 1rem;
+        /* larger text on smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem;
+        /* around 32px, smaller headings on mobile */
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        /* around 28px, slightly smaller for mobile */
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        /* around 24px, adjusted for mobile */
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        /* around 20px, suitable for mobile */
+    }
+
+    h5 {
+        font-size: 1.1rem;
+        /* around 17.6px, optimized for mobile */
+    }
+
+    h6 {
+        font-size: 1rem;
+        /* around 16px, consistent with body text */
+    }
+}
+
+.button {
+    font-size: 1rem;
+    /* clear and legible */
+}
+
+.caption {
+    font-size: 0.8rem;
+    /* smaller than regular text */
 }
